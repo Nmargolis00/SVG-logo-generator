@@ -24,18 +24,14 @@ function init() {
         {
             type: 'input',
             name: 'textColor',
-            message: 'Please Enter a color name or hexidecimal number'
+            message: 'Please Enter a color name or hexidecimal number for your text'
         },
          // How do I make sure it is a color/propeerly linked?
         {
             type: 'list',
             name: 'shape',
             message: 'What shape would you like?',
-            choices: [
-                {name: 'Circle', value: 'Circle'}, 
-                {name: 'Square', value: 'Square'}, 
-                {name: 'Triangle', value: 'Triangle'}, 
-            ],
+            choices: ["Circle", "Square", "Triangle"],
         },
         {
             type: 'input',
@@ -61,7 +57,7 @@ function init() {
         }
         shapeType.setColor(shapeColor);
         const svg = new SVG();
-        svg.setTextColor(characters, textColor);
+        svg.setTextColor(textColor, characters);
         svg.setShape(shapeType);
         return writeFile('logo.svg', svg.render())
     }).then(()=>{
