@@ -26,7 +26,7 @@ function init() {
             name: 'textColor',
             message: 'Please Enter a color name or hexidecimal number for your text'
         },
-         // How do I make sure it is a color/propeerly linked?
+      
         {
             type: 'list',
             name: 'shape',
@@ -38,7 +38,7 @@ function init() {
             name: 'shapeColor',
             message: 'Please Enter a your desired color for the shape'
         },
-    // How do I make sure it is a color/propeerly linked?
+   
     ]).then(({characters, textColor, shape, shapeColor})=>{
         let shapeType;
         switch (shape) {
@@ -71,6 +71,8 @@ function init() {
 
 
 init();
+
+module.exports{}
 
 // AND the output text "Generated logo.svg" is printed in the command line
 // WHEN I open the `logo.svg` file in a browser
