@@ -1,4 +1,4 @@
-const {Circle, Square, Triangle} = require('./shapes');
+const {Circle, Square, Triangle} = require('../lib/shapes');
 const index = require('index');
 
 
