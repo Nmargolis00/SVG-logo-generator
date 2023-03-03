@@ -24,7 +24,15 @@ function init() {
         {
             type: 'input',
             name: 'textColor',
-            message: 'Please Enter a color name or hexidecimal number for your text'
+            message: 'Please Enter a color name or hexidecimal number for your text',
+            validate: function(input) {
+                try {
+                    color(input);
+                    return true;
+                } catch (error) {
+                    return "Enter a valid color"
+                }
+            },
         },
       
         {
@@ -36,7 +44,15 @@ function init() {
         {
             type: 'input',
             name: 'shapeColor',
-            message: 'Please Enter a your desired color for the shape'
+            message: 'Please Enter a your desired color for the shape',
+            validate: function(input) {
+                try {
+                    color(input);
+                    return true;
+                } catch (error) {
+                    return "Enter a valid color"
+                }
+            },
         },
    
     ]).then(({characters, textColor, shape, shapeColor})=>{
