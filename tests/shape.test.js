@@ -3,7 +3,7 @@ const {Circle, Square, Triangle} = require('../lib/shapes');
 
 //Circle Test
 describe('Circle', () => {
-    test("should render svg for a green circle element", () => {
+    test("should render svg for a green circle", () => {
         const expectedSvg = `<circle cx="150" cy="100" r="80" fill="green" />`;
         const circle = new Circle();
         circle.setColor("green");
@@ -17,7 +17,7 @@ describe('Circle', () => {
 
 //Square Test
 describe('Square', () => {
-    test("should render svg for a green square element", () => {
+    test("should render svg for a green square", () => {
         const expectedSvg = `<rect x="90" y="40" width="120" height="120" fill="green" />`;
         const square = new Square();
         square.setColor("green");
@@ -29,7 +29,7 @@ describe('Square', () => {
 
 //Triangle Test
 describe('Triangle', () => {
-    test("should render svg for a green triangle element", () => {
+    test("should render svg for a green triangle", () => {
         const expectedSvg = `<polygon points="150, 18 244, 182 56, 182" fill="green" />`;
         const triangle = new Triangle();
         triangle.setColor("green");
