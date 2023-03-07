@@ -61,7 +61,7 @@ function init() {
         svg.setShape(shapeType);
         return writeFile('logo.svg', svg.render())
     }).then(()=>{
-        console.log('Made you a logo, you better like it');
+        console.log('Generated logo.svg');
     }).catch((error)=>{
         console.log(error);
     })
